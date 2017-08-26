@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-schema="DL724"/>
+  <table-filter match-name="BUSSTOP"/>
+  <table-filter match-name="BUSFARE"/>
+  <table-filter match-name="BUSROUTE"/>
+  <table-filter match-name="BUSINFO"/>
+  <table-filter match-name="USERREGISTRATION"/>
+  <table-filter match-name="PASSENGERINFO"/>
+</hibernate-reverse-engineering>

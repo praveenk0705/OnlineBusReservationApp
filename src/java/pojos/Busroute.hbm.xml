@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 1, 2011 6:53:38 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojos.Busroute" table="BUSROUTE" schema="DL724">
+        <id name="routeserialid" type="int">
+            <column name="ROUTESERIALID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="routeid" type="string">
+            <column name="ROUTEID" length="10" not-null="true" />
+        </property>
+        <property name="stationone" type="string">
+            <column name="STATIONONE" length="30" not-null="true" />
+        </property>
+        <property name="stationtwo" type="string">
+            <column name="STATIONTWO" length="30" not-null="true" />
+        </property>
+        <set name="busfares" inverse="true">
+            <key>
+                <column name="ROUTESERIALID" precision="22" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Busfare" />
+        </set>
+    </class>
+</hibernate-mapping>

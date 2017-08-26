@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@pdc1:1521:oracle</property>
+    <property name="hibernate.connection.username">dl724</property>
+    <property name="hibernate.connection.password">dl724</property>
+    <property name="hibernate.connection.autocommit">false</property>
+    <property name="hibernate.connection.pool_size">1</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+
+    
+    <mapping resource="pojos/Busfare.hbm.xml"/>
+    <mapping resource="pojos/Busroute.hbm.xml"/>
+    <mapping resource="pojos/Userregistration.hbm.xml"/>
+    <mapping resource="pojos/Passengerinfo.hbm.xml"/>
+    <mapping resource="pojos/Busstop.hbm.xml"/>
+    <mapping resource="pojos/Businfo.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

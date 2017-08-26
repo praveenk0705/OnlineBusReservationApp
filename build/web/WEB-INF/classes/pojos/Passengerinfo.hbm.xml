@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 1, 2011 6:53:38 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojos.Passengerinfo" table="PASSENGERINFO" schema="DL724">
+        <id name="seatno" type="int">
+            <column name="SEATNO" precision="5" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="userregistration" class="pojos.Userregistration" fetch="select">
+            <column name="EMAILID" length="30" />
+        </many-to-one>
+        <many-to-one name="businfo" class="pojos.Businfo" fetch="select">
+            <column name="BUSID" precision="22" scale="0" />
+        </many-to-one>
+        <property name="passengername" type="string">
+            <column name="PASSENGERNAME" length="20" not-null="true" />
+        </property>
+        <property name="age" type="int">
+            <column name="AGE" precision="3" scale="0" not-null="true" />
+        </property>
+        <property name="amount" type="int">
+            <column name="AMOUNT" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

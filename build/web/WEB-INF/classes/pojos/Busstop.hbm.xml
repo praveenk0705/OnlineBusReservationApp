@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 1, 2011 6:53:38 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojos.Busstop" table="BUSSTOP" schema="DL724">
+        <id name="stopid" type="int">
+            <column name="STOPID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="businfo" class="pojos.Businfo" fetch="select">
+            <column name="BUSID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="place" type="string">
+            <column name="PLACE" length="40" not-null="true" />
+        </property>
+        <property name="uptime" type="string">
+            <column name="UPTIME" length="20" not-null="true" />
+        </property>
+        <property name="downtime" type="string">
+            <column name="DOWNTIME" length="20" not-null="true" />
+        </property>
+        <property name="headsign" type="int">
+            <column name="HEADSIGN" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
